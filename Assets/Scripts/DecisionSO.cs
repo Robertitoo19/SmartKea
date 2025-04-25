@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Decision System")]
-public class DecisionS0 : ScriptableObject
+public class DecisionSO : ScriptableObject
 {
     [TextArea] public string questionText;
     public DecisionOption[] options;
@@ -14,5 +14,6 @@ public class DecisionS0 : ScriptableObject
 public class DecisionOption
 {
     public string optionText;
-    public DecisionS0 nextNode;
+    public DecisionSO nextNode;
+    public string triggerID;
 }

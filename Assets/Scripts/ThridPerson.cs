@@ -5,9 +5,12 @@ using UnityEngine;
 public class ThridPerson : MonoBehaviour
 {
     [SerializeField] private float speedMov;
-    CharacterController controller;
     [SerializeField] private float smoothTime;
+
+    CharacterController controller;
     private float speedRotate;
+
+    private bool canMove = true;
     void Start()
     {
         //coger componente de character controller
@@ -15,7 +18,10 @@ public class ThridPerson : MonoBehaviour
     }
     void Update()
     {
-        MovYRotate();
+        if (canMove)
+        {
+            MovYRotate();
+        }
     }
     void MovYRotate()
     {
@@ -43,5 +49,9 @@ public class ThridPerson : MonoBehaviour
             controller.Move(movement * speedMov * Time.deltaTime);
 
         }   
+    }
+    public void SetCanMove(bool value)
+    {
+        canMove = value;
     }
 }

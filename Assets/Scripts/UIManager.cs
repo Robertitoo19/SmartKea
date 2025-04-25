@@ -27,7 +27,12 @@ public class UIManager : MonoBehaviour
     {
         canvas.SetActive(true);
         questionText.text = question;
+
         Time.timeScale = 0f;
+        FindObjectOfType<ThridPerson>().SetCanMove(false);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void UpdateOptions(string[] options)
@@ -43,9 +48,15 @@ public class UIManager : MonoBehaviour
                 optionButtons[i].onClick.RemoveAllListeners();
                 optionButtons[i].onClick.AddListener(() =>
                 {
+
+                    FindObjectOfType<DecisionManager>().SelectOption(index);
+
                     Time.timeScale = 1f;
                     canvas.SetActive(false);
-                    FindObjectOfType<DecisionManager>().SelectOption(index);
+                    FindObjectOfType<ThridPerson>().SetCanMove(true);
+
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
                 });
             }
             else

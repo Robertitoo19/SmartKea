@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class DecisionManager : MonoBehaviour
 {
-    private DecisionS0 currentNode;
+    private DecisionSO currentNode;
 
-    public void StartDecision(DecisionS0 startNode)
+    public void StartDecision(DecisionSO startNode)
     {
         currentNode = startNode;
         ShowCurrentNode();
@@ -17,7 +17,12 @@ public class DecisionManager : MonoBehaviour
     {
         if (index < 0 || index >= currentNode.options.Length) return;
 
-        currentNode = currentNode.options[index].nextNode;
+        var selectedOption = currentNode.options[index];
+
+        // Activar el trigger usando su ID
+        FindObjectOfType<TriggerActivator>()?.ActivateTrigger(selectedOption.triggerID);
+
+        currentNode = selectedOption.nextNode;
 
         if (currentNode != null)
         {
