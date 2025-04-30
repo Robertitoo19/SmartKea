@@ -1281,9 +1281,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6225126010177924824, guid: 8caa7e9a4da44f949a296a309fcd4965,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1949570189}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 610503429085301361, guid: 8caa7e9a4da44f949a296a309fcd4965,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 761157719}
   m_SourcePrefab: {fileID: 100100000, guid: 8caa7e9a4da44f949a296a309fcd4965, type: 3}
+--- !u!4 &761157716 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6225126010177924824, guid: 8caa7e9a4da44f949a296a309fcd4965,
+    type: 3}
+  m_PrefabInstance: {fileID: 761157715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &761157717 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 760042254555814912, guid: 8caa7e9a4da44f949a296a309fcd4965,
+    type: 3}
+  m_PrefabInstance: {fileID: 761157715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &761157718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 610503429085301361, guid: 8caa7e9a4da44f949a296a309fcd4965,
+    type: 3}
+  m_PrefabInstance: {fileID: 761157715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &761157719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761157718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07dd57f195e94448a8ae120b61a1ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinRenderer: {fileID: 761157717}
+  hairParent: {fileID: 1949570189}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2129,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1949570188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949570189}
+  m_Layer: 0
+  m_Name: Cabeza
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949570189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949570188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.773, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 761157716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442506483381888626
 GameObject:
   m_ObjectHideFlags: 3
