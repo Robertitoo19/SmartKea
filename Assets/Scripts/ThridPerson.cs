@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Profiling;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ThridPerson : MonoBehaviour
 {
@@ -9,13 +11,23 @@ public class ThridPerson : MonoBehaviour
 
     CharacterController controller;
     private float speedRotate;
+    private PlayerInput playerInput;
+    private Vector2 input;
 
     private bool canMove = true;
-    void Start()
+
+    private void Awake()
     {
-        //coger componente de character controller
         controller = GetComponent<CharacterController>();
+        playerInput = GetComponent<PlayerInput>();
     }
+    private void OnEnable()
+    {
+        playerInput.actions["Move"].performed += Move;
+        playerInput.actions["Move"].canceled += MoveCancelled;
+    }
+
+
     void Update()
     {
         if (canMove)
@@ -23,6 +35,15 @@ public class ThridPerson : MonoBehaviour
             MovYRotate();
         }
     }
+    private void Move(InputAction.CallbackContext ctx)
+    {
+        input = ctx.ReadValue<Vector2>();
+    }
+    private void MoveCancelled(InputAction.CallbackContext ctx)
+    {
+        input = Vector2.zero;
+    }
+
     void MovYRotate()
     {
         //coger datos de donde te mueves
@@ -47,7 +68,6 @@ public class ThridPerson : MonoBehaviour
 
             //movimiento controller
             controller.Move(movement * speedMov * Time.deltaTime);
-
         }   
     }
     public void SetCanMove(bool value)

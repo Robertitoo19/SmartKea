@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,15 +8,19 @@ public class CharacterCustomizationManager : MonoBehaviour
     public static CharacterCustomizationManager Instance;
 
     [Header("Piel")]
-    public Renderer skinRenderer;
-    public Color[] skinColors;
+    [SerializeField] private Renderer skinRenderer;
+    [SerializeField] private Color[] skinColors;
     private int skinIndex = 0;
 
     [Header("Pelo")]
-    public Transform hairParent; 
-    public GameObject[] hairPrefabs;
+    [SerializeField] private Transform hairParent; 
+    [SerializeField] private GameObject[] hairPrefabs;
     private int hairIndex = 0;
     private GameObject currentHair;
+
+    [Header("Color Pelo")]
+    [SerializeField] private Color[] hairColors;
+    private int hairColorIndex = 0;
 
     private void Awake()
     {
@@ -42,7 +47,6 @@ public class CharacterCustomizationManager : MonoBehaviour
         skinIndex = (skinIndex + direction + skinColors.Length) % skinColors.Length;
         ApplySkinColor();
     }
-
     private void ApplySkinColor()
     {
         if (skinRenderer != null)
@@ -71,7 +75,29 @@ public class CharacterCustomizationManager : MonoBehaviour
         currentHair.transform.localPosition = Vector3.zero;
         currentHair.transform.localRotation = Quaternion.identity;
         currentHair.transform.localScale = Vector3.one;
+
+        ApplyHairColor();
     }
+    public void ChangeHairColor(int direction)
+    {
+        if(hairColors == null || hairColors.Length == 0 || currentHair == null)
+        {
+            return;
+        }
+
+        hairColorIndex = (hairColorIndex + direction + hairColors.Length) % hairColors.Length;
+        ApplyHairColor();
+    }
+
+    private void ApplyHairColor()
+    {
+        Renderer hairRenderer = currentHair.GetComponentInChildren<Renderer>();
+        if (hairRenderer != null)
+        {
+            hairRenderer.material.color = hairColors[hairColorIndex];
+        }
+    }
+
     public void SetCharacterReferences(Renderer newSkinRenderer, Transform newHairParent)
     {
         skinRenderer = newSkinRenderer;
