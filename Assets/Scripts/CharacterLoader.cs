@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterLoader : MonoBehaviour
 {
-    public Renderer skinRenderer;
+    public Renderer[] skinRenderer;
     public Transform hairParent;
     void Start()
     {

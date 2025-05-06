@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: 45f4c64d9ece4d64c81c34b69342ecb5
+guid: b2f7e4b55f8107c41968ae993ea60f70
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CamisaCalcetines
+    second: {fileID: 2100000, guid: fe33e3cb31c6cb54ca99f0f3e36db030, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chaqueta
+    second: {fileID: 2100000, guid: 91a90245656958e4fa072da10d295c9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corbata
+    second: {fileID: 2100000, guid: edd87b18fda75ce4ca3060363c8045f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pantalones
+    second: {fileID: 2100000, guid: 328d205ed5ddb754aa74d483a449c7f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piel
+    second: {fileID: 2100000, guid: c1c694d4ffc2a064e98b0ed71761d5b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zapatos
+    second: {fileID: 2100000, guid: 6eb382f0bd6a6ff4ba5a142e35d8dba4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

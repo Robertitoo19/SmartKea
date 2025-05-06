@@ -8,7 +8,7 @@ public class CharacterCustomizationManager : MonoBehaviour
     public static CharacterCustomizationManager Instance;
 
     [Header("Piel")]
-    [SerializeField] private Renderer skinRenderer;
+    [SerializeField] private Renderer[] skinRenderer;
     [SerializeField] private Color[] skinColors;
     private int skinIndex = 0;
 
@@ -36,6 +36,17 @@ public class CharacterCustomizationManager : MonoBehaviour
 
     private void Start()
     {
+        if (skinRenderer != null)
+        {
+            for (int i = 0; i < skinRenderer.Length; i++)
+            {
+                if (skinRenderer[i] != null)
+                {
+                    skinRenderer[i].material = new Material(skinRenderer[i].material);
+                }
+            }
+        }
+
         ApplySkinColor();
         ApplyHair();
     }
@@ -49,9 +60,17 @@ public class CharacterCustomizationManager : MonoBehaviour
     }
     private void ApplySkinColor()
     {
-        if (skinRenderer != null)
+        if (skinRenderer == null || skinRenderer.Length == 0)
+            return;
+
+        foreach (Renderer rend in skinRenderer)
         {
-            skinRenderer.material.color = skinColors[skinIndex];
+            if (rend != null)
+            {
+                // Instancia el material para que no se modifique el original
+                rend.material = new Material(rend.material);
+                rend.material.color = skinColors[skinIndex];
+            }
         }
     }
     public void ChangeHair(int direction)
@@ -98,7 +117,7 @@ public class CharacterCustomizationManager : MonoBehaviour
         }
     }
 
-    public void SetCharacterReferences(Renderer newSkinRenderer, Transform newHairParent)
+    public void SetCharacterReferences(Renderer[] newSkinRenderer, Transform newHairParent)
     {
         skinRenderer = newSkinRenderer;
         hairParent = newHairParent;
