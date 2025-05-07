@@ -10,7 +10,7 @@ public class CharacterCustomizationManager : MonoBehaviour
     [Header("Piel")]
     [SerializeField] private Renderer[] skinRenderer;
     [SerializeField] private Color[] skinColors;
-    private int skinIndex = 0;
+    private int skinColorIndex = 0;
 
     [Header("Pelo")]
     [SerializeField] private Transform hairParent; 
@@ -22,6 +22,20 @@ public class CharacterCustomizationManager : MonoBehaviour
     [SerializeField] private Color[] hairColors;
     private int hairColorIndex = 0;
 
+    [Header("Chaqueta")]
+    [SerializeField] private Renderer[] jacketRenderer;
+    [SerializeField] private Color[] jacketColors;
+    private int jacketColorIndex = 0;
+
+    [Header("Pantalon")]
+    [SerializeField] private Renderer[] pantsRenderer;
+    [SerializeField] private Color[] pantsColors;
+    private int pantsColorIndex = 0;
+
+    [Header("Zapatos")]
+    [SerializeField] private Renderer[] shoesRenderer;
+    [SerializeField] private Color[] shoesColors;
+    private int shoesColorIndex = 0;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -48,6 +62,9 @@ public class CharacterCustomizationManager : MonoBehaviour
         }
 
         ApplySkinColor();
+        ApplyJacketColor();
+        ApplyPantsColor();
+        ApplyShoesColor();
         ApplyHair();
     }
     public void ChangeSkinColor(int direction)
@@ -55,7 +72,7 @@ public class CharacterCustomizationManager : MonoBehaviour
         if (skinColors == null || skinColors.Length == 0)
             return;
 
-        skinIndex = (skinIndex + direction + skinColors.Length) % skinColors.Length;
+        skinColorIndex = (skinColorIndex + direction + skinColors.Length) % skinColors.Length;
         ApplySkinColor();
     }
     private void ApplySkinColor()
@@ -69,7 +86,7 @@ public class CharacterCustomizationManager : MonoBehaviour
             {
                 // Instancia el material para que no se modifique el original
                 rend.material = new Material(rend.material);
-                rend.material.color = skinColors[skinIndex];
+                rend.material.color = skinColors[skinColorIndex];
             }
         }
     }
@@ -117,12 +134,81 @@ public class CharacterCustomizationManager : MonoBehaviour
         }
     }
 
-    public void SetCharacterReferences(Renderer[] newSkinRenderer, Transform newHairParent)
+    public void ChangeJacketColor(int direction)
     {
-        skinRenderer = newSkinRenderer;
+        if (jacketColors == null || jacketColors.Length == 0)
+            return;
+
+        jacketColorIndex = (jacketColorIndex + direction + jacketColors.Length) % jacketColors.Length;
+        ApplyJacketColor();
+    }
+
+    private void ApplyJacketColor()
+    {
+        foreach (Renderer rend in jacketRenderer)
+        {
+            if (rend != null)
+            {
+                rend.material = new Material(rend.material);
+                rend.material.color = jacketColors[jacketColorIndex];
+            }
+        }
+    }
+
+    public void ChangePantsColor(int direction)
+    {
+        if (pantsColors == null || pantsColors.Length == 0)
+            return;
+
+        pantsColorIndex = (pantsColorIndex + direction + pantsColors.Length) % pantsColors.Length;
+        ApplyPantsColor();
+    }
+
+    private void ApplyPantsColor()
+    {
+        foreach (Renderer rend in pantsRenderer)
+        {
+            if (rend != null)
+            {
+                rend.material = new Material(rend.material);
+                rend.material.color = pantsColors[pantsColorIndex];
+            }
+        }
+    }
+
+    public void ChangeShoesColor(int direction)
+    {
+        if (shoesColors == null || shoesColors.Length == 0)
+            return;
+
+        shoesColorIndex = (shoesColorIndex + direction + shoesColors.Length) % shoesColors.Length;
+        ApplyShoesColor();
+    }
+
+    private void ApplyShoesColor()
+    {
+        foreach (Renderer rend in shoesRenderer)
+        {
+            if (rend != null)
+            {
+                rend.material = new Material(rend.material);
+                rend.material.color = shoesColors[shoesColorIndex];
+            }
+        }
+    }
+    public void SetCharacterReferences(Renderer[] newSkin, Transform newHairParent, Renderer[] newJacket, Renderer[] newPants, Renderer[] newShoes)
+    {
+        skinRenderer = newSkin;
+        jacketRenderer = newJacket;
+        pantsRenderer = newPants;
+        shoesRenderer = newShoes;
+
         hairParent = newHairParent;
 
         ApplySkinColor();
+        ApplyJacketColor();
+        ApplyPantsColor();
+        ApplyShoesColor();
         ApplyHair();
     }
 }

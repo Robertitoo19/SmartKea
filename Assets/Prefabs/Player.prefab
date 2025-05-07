@@ -129,6 +129,12 @@ MonoBehaviour:
   skinRenderer:
   - {fileID: 3798229946256006433}
   - {fileID: 5070791297359465243}
+  jacketRenderer:
+  - {fileID: 3338269146890376498}
+  pantsRenderer:
+  - {fileID: 1661340526278659964}
+  shoesRenderer:
+  - {fileID: 4162043286821896082}
   hairParent: {fileID: 4044034744167452297}
 --- !u!54 &4900965454577478382
 Rigidbody:

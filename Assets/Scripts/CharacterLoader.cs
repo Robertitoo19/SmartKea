@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class CharacterLoader : MonoBehaviour
 {
-    public Renderer[] skinRenderer;
-    public Transform hairParent;
+    [SerializeField] private Renderer[] skinRenderer;
+    [SerializeField] private Renderer[] jacketRenderer;
+    [SerializeField] private Renderer[] pantsRenderer;
+    [SerializeField] private Renderer[] shoesRenderer;
+
+    [SerializeField] private Transform hairParent;
     void Start()
     {
-        CharacterCustomizationManager.Instance.SetCharacterReferences(skinRenderer, hairParent);
+        CharacterCustomizationManager.Instance.SetCharacterReferences(skinRenderer, hairParent, jacketRenderer, pantsRenderer, shoesRenderer);
     }
 }
