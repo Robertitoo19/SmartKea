@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498c0a71d83a59f4b85e3ace801428ac, type: 3}
   m_Name: Pregunta1
   m_EditorClassIdentifier: 
-  questionText: "\xBFDe que color es el caballo blanco de Santiago?"
+  questionText: "\xBFDonde quieres ir?"
   options:
-  - optionText: Blanco
+  - optionText: Despacho
     nextNode: {fileID: 11400000, guid: 255b3d1db459e044093d1b2f9c6ccca6, type: 2}
     triggerID: 0
-  - optionText: Negro
+  - optionText: Reuniones
     nextNode: {fileID: 11400000, guid: 0e74bbb37b01982458f3bd6b5cc0e870, type: 2}
     triggerID: 1
-  - optionText: Metal
+  - optionText: Despacho2
     nextNode: {fileID: 11400000, guid: 64a2a1f96dc69354cb7e2a05e91046b1, type: 2}
-    triggerID: 
+    triggerID: 2

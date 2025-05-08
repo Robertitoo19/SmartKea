@@ -9,11 +9,14 @@ public class ThridPerson : MonoBehaviour
     [Header ("Movement")]
     [SerializeField] private float speedMov;
     [SerializeField] private float smoothTime;
+    [SerializeField] private float gravityFactor;
+
 
     [Header("Anims")]
     [SerializeField] private Animator animator;
 
     private CharacterController controller;
+    private Vector3 verticalMovement;
     private float speedRotate;
     private Vector2 input;
     private bool canMove = true;
@@ -30,6 +33,7 @@ public class ThridPerson : MonoBehaviour
             float movV = Input.GetAxis("Vertical");
             input = new Vector2(movH, movV).normalized;
 
+            ApplyGravity();
             MovYRotate();
 
             float currentSpeed = input.magnitude;
@@ -53,6 +57,19 @@ public class ThridPerson : MonoBehaviour
             //movimiento controller
             controller.Move(movement * speedMov * Time.deltaTime);
         }
+    }
+    private void ApplyGravity()
+    {
+        if (controller.isGrounded)
+        {
+            verticalMovement.y = -1f;
+        }
+        else
+        {
+            verticalMovement.y += gravityFactor * Time.deltaTime;
+        }
+
+        controller.Move(verticalMovement * Time.deltaTime);
     }
     public void SetCanMove(bool value)
     {

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498c0a71d83a59f4b85e3ace801428ac, type: 3}
   m_Name: Pregunta2B
   m_EditorClassIdentifier: 
-  questionText: No pero casi no pasa nada
+  questionText: Reuniones
   options: []

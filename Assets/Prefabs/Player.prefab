@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 1846326288067440425}
   - component: {fileID: 3297507815251287279}
   - component: {fileID: 3695815285681333017}
-  - component: {fileID: 4900965454577478382}
   - component: {fileID: 3625300541234058789}
   m_Layer: 0
   m_Name: Player
@@ -113,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMov: 5
   smoothTime: 0.3
+  gravityFactor: -9.8
   animator: {fileID: 5327066257705193931}
 --- !u!114 &3695815285681333017
 MonoBehaviour:
@@ -136,33 +136,6 @@ MonoBehaviour:
   shoesRenderer:
   - {fileID: 4162043286821896082}
   hairParent: {fileID: 4044034744167452297}
---- !u!54 &4900965454577478382
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610503429085301361}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!143 &3625300541234058789
 CharacterController:
   m_ObjectHideFlags: 0
@@ -188,7 +161,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.07, z: 0}
 --- !u!1 &754656144050455263
 GameObject:
   m_ObjectHideFlags: 0
