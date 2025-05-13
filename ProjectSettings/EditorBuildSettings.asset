@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Personalizacion.unity
+    path: Assets/Scenes/PantallaInicio.unity
+    guid: d239e2aaa391ab44dbd7d2bf145f5bd1
+  - enabled: 1
+    path: Assets/Scenes/PersonalizacionHombre.unity
     guid: ae1e9bbcf78e5734fa2234dd660e2714
   - enabled: 1
-    path: Assets/Scenes/Pruebas.unity
+    path: Assets/Scenes/PersonalizacionMujer.unity
+    guid: 3c8cf2d2bcefde949b7aec72d0d7d237
+  - enabled: 1
+    path: Assets/Scenes/EscenaHombre.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/EscenaMujer.unity
+    guid: af7c16aa8339e5d4294b007c47a09dfb
   m_configObjects: {}

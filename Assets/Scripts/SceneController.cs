@@ -5,8 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public void Game()
+    public void EscenaHombre()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void EscenaMujer()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void PersoHombre()
     {
         SceneManager.LoadScene(1);
+    }
+    public void PersoMujer()
+    {
+        SceneManager.LoadScene(2);
     }
 }
