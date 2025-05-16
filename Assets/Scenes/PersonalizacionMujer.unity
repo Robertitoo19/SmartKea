@@ -1391,6 +1391,8 @@ MonoBehaviour:
   hairPrefabs:
   - {fileID: 3223249271254392929, guid: 1990c08815ae74f42aa5d992bcb285f0, type: 3}
   - {fileID: 2510119140650569457, guid: 85ff5a2667fb9f04d91e1b87c4454e7f, type: 3}
+  - {fileID: 1331906625019830182, guid: b1e28ff59e5d6974cb755deebb1775c0, type: 3}
+  - {fileID: 6802810344996774622, guid: 1d2810cee741bbd4fa724509be9ba899, type: 3}
   hairColors:
   - {r: 0.72156864, g: 0.654902, b: 0.41960788, a: 0}
   - {r: 0.24007164, g: 1, b: 0.21226418, a: 0}
