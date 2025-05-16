@@ -1006,104 +1006,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1001 &111523259
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 226529141}
-    m_Modifications:
-    - target: {fileID: 610503429085301361, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_Name
-      value: MenSuit
-      objectReference: {fileID: 0}
-    - target: {fileID: 610503429085301361, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.08715578
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9961947
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7232818897460007596, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: camPositions.Array.data[0]
-      value: 
-      objectReference: {fileID: 494170224}
-    - target: {fileID: 7232818897460007596, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: camPositions.Array.data[1]
-      value: 
-      objectReference: {fileID: 309740008}
-    - target: {fileID: 7232818897460007596, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: camPositions.Array.data[2]
-      value: 
-      objectReference: {fileID: 552772091}
-    - target: {fileID: 7232818897460007596, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: camPositions.Array.data[3]
-      value: 
-      objectReference: {fileID: 53264948}
-    - target: {fileID: 7232818897460007596, guid: 133dab12671026c4e987f15688cc6253,
-        type: 3}
-      propertyPath: camPositions.Array.data[4]
-      value: 
-      objectReference: {fileID: 1097425328}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 133dab12671026c4e987f15688cc6253, type: 3}
 --- !u!1 &113461248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1079,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1357343045}
   - {fileID: 3752715770595436857}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1397,7 +1298,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -1477,8 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinRenderer:
-  - {fileID: 1598752682}
-  - {fileID: 1026565540}
+  - {fileID: 1311486641041782029}
   skinColors:
   - {r: 0.45882356, g: 0.3921569, b: 0.19215688, a: 0}
   - {r: 0.4431373, g: 0.4431373, b: 0.43921572, a: 0}
@@ -1487,7 +1387,7 @@ MonoBehaviour:
   - {r: 0.9386786, g: 1, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0.5176471, g: 0.36078432, b: 0.19607845, a: 0}
-  hairParent: {fileID: 777491735}
+  hairParent: {fileID: 1311486641041782028}
   hairPrefabs:
   - {fileID: 3223249271254392929, guid: 1990c08815ae74f42aa5d992bcb285f0, type: 3}
   - {fileID: 2510119140650569457, guid: 85ff5a2667fb9f04d91e1b87c4454e7f, type: 3}
@@ -1496,19 +1396,19 @@ MonoBehaviour:
   - {r: 0.24007164, g: 1, b: 0.21226418, a: 0}
   - {r: 0.4339623, g: 0.24586795, b: 0.08392666, a: 0}
   jacketRenderer:
-  - {fileID: 2088517099}
+  - {fileID: 1311486641041782027}
   jacketColors:
   - {r: 0.11764707, g: 0.11764707, b: 0.20392159, a: 1}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0.9315591, b: 0, a: 0}
   pantsRenderer:
-  - {fileID: 1886344740}
+  - {fileID: 1311486641041782026}
   pantsColors:
   - {r: 0.11764707, g: 0.11764707, b: 0.20392159, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0.9333334, b: 0, a: 0}
   shoesRenderer:
-  - {fileID: 1766381810}
+  - {fileID: 1311486641041782024}
   shoesColors:
   - {r: 0.015686275, g: 0.015686275, b: 0.015686275, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
@@ -1982,7 +1882,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -2739,7 +2639,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -2864,12 +2764,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729872793}
   m_CullTransparentMesh: 1
---- !u!4 &777491735 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4044034744167452297, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &778628914
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,7 +3080,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -3815,18 +3709,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897828204}
   m_CullTransparentMesh: 1
---- !u!114 &929580055 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7232818897460007596, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dbb2f72bfe275243869e32888b881ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &963076381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4174,7 +4056,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -4260,12 +4142,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0000019073486}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
---- !u!137 &1026565540 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 5070791297359465243, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050964614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4495,7 +4371,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -5114,7 +4990,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -5409,7 +5285,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -6015,12 +5891,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350932835}
   m_CullTransparentMesh: 1
---- !u!4 &1357343045 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1846326288067440425, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1367515351
 GameObject:
   m_ObjectHideFlags: 0
@@ -6415,12 +6285,6 @@ MonoBehaviour:
     backgroundColor: {r: 0.85098046, g: 0.121568635, b: 0.20000002, a: 1}
     textColor: {r: 0.9921569, g: 0.8235295, b: 0.03137255, a: 1}
     buttonColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!137 &1598752682 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3798229946256006433, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1658045095
 GameObject:
   m_ObjectHideFlags: 0
@@ -6618,7 +6482,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -6802,12 +6666,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753329147}
   m_CullTransparentMesh: 1
---- !u!137 &1766381810 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4162043286821896082, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1772551049
 GameObject:
   m_ObjectHideFlags: 0
@@ -7246,12 +7104,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!137 &1886344740 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1661340526278659964, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1976500484
 GameObject:
   m_ObjectHideFlags: 0
@@ -7422,7 +7274,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -7739,7 +7591,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -7897,12 +7749,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080691829}
   m_CullTransparentMesh: 1
---- !u!137 &2088517099 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3338269146890376498, guid: 133dab12671026c4e987f15688cc6253,
-    type: 3}
-  m_PrefabInstance: {fileID: 111523259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2097158965
 GameObject:
   m_ObjectHideFlags: 0
@@ -8170,7 +8016,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 929580055}
+      - m_Target: {fileID: 3752715770595436858}
         m_TargetAssemblyTypeName: CameraCustomizationController, Assembly-CSharp
         m_MethodName: ChangeCamPosition
         m_Mode: 3
@@ -8332,11 +8178,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: WomanSuit
       objectReference: {fileID: 0}
+    - target: {fileID: 2990206062150228580, guid: 28662e828f49dcf4f82650122d24588e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2990206062150228580, guid: 28662e828f49dcf4f82650122d24588e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3752715770595436858}
   m_SourcePrefab: {fileID: 100100000, guid: 28662e828f49dcf4f82650122d24588e, type: 3}
+--- !u!137 &1311486641041782024 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6269478006901750973, guid: 28662e828f49dcf4f82650122d24588e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311486641041782023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1311486641041782025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2990206062150228580, guid: 28662e828f49dcf4f82650122d24588e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311486641041782023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1311486641041782026 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 745908430160892389, guid: 28662e828f49dcf4f82650122d24588e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311486641041782023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1311486641041782027 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5204828701532139835, guid: 28662e828f49dcf4f82650122d24588e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311486641041782023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1311486641041782028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6974901144916830040, guid: 28662e828f49dcf4f82650122d24588e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311486641041782023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1311486641041782029 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7511870456049811189, guid: 28662e828f49dcf4f82650122d24588e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311486641041782023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1658395705879201136
 GameObject:
   m_ObjectHideFlags: 0
@@ -8674,6 +8565,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1311486641041782023}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3752715770595436858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311486641041782025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbb2f72bfe275243869e32888b881ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movSpeed: 1
+  rotSpeed: 1.6
+  camPositions:
+  - {fileID: 494170224}
+  - {fileID: 309740008}
+  - {fileID: 552772091}
+  - {fileID: 53264948}
+  - {fileID: 1097425328}
 --- !u!33 &3965252605558456291
 MeshFilter:
   m_ObjectHideFlags: 0
