@@ -29,8 +29,8 @@ public class ThridPerson : MonoBehaviour
     {
         if (canMove)
         {
-            float movH = Input.GetAxis("Horizontal");
-            float movV = Input.GetAxis("Vertical");
+            float movH = Input.GetAxisRaw("Horizontal");
+            float movV = Input.GetAxisRaw("Vertical");
             input = new Vector2(movH, movV).normalized;
 
             ApplyGravity();
