@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PersonalizacionMujer.unity
     guid: 3c8cf2d2bcefde949b7aec72d0d7d237
   - enabled: 1
+    path: Assets/Scenes/EscenaHombre.unity
+    guid: a8238ac243e580f428d041e6d9853eed
+  - enabled: 1
     path: Assets/Scenes/EscenaMujer.unity
     guid: af7c16aa8339e5d4294b007c47a09dfb
   m_configObjects: {}
