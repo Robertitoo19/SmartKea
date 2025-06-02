@@ -267,6 +267,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinRenderer:
   - {fileID: 8580078180296695888}
+  shirtRenderer:
+  - {fileID: 9046282565727454203}
+  tieRenderer:
+  - {fileID: 2084669547341682715}
   jacketRenderer:
   - {fileID: 7364932145697381903}
   pantsRenderer:
@@ -2398,7 +2402,7 @@ Animator:
   m_GameObject: {fileID: 7911445775571529925}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a7fd67b27921e3d40b72d679cccbe014, type: 2}
+  m_Controller: {fileID: 9100000, guid: 26cf78e3574100c4aae6a01ed3af76b1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

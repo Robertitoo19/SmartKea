@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +20,16 @@ public class CharacterCustomizationManager : MonoBehaviour
     [Header("Color Pelo")]
     [SerializeField] private Color[] hairColors;
     private int hairColorIndex = 0;
+
+    [Header("Camisa")]
+    [SerializeField] private Renderer[] ShirtRenderer;
+    [SerializeField] private Color[] ShirtColors;
+    private int ShirtColorIndex = 0;
+
+    [Header("Corbata")]
+    [SerializeField] private Renderer[] TieRenderer;
+    [SerializeField] private Color[] TieColors;
+    private int TieColorIndex = 0;
 
     [Header("Chaqueta")]
     [SerializeField] private Renderer[] jacketRenderer;
@@ -62,6 +71,8 @@ public class CharacterCustomizationManager : MonoBehaviour
         }
 
         ApplySkinColor();
+        ApplyShirtColor();
+        ApplyTieColor();
         ApplyJacketColor();
         ApplyPantsColor();
         ApplyShoesColor();
@@ -133,7 +144,46 @@ public class CharacterCustomizationManager : MonoBehaviour
             hairRenderer.material.color = hairColors[hairColorIndex];
         }
     }
+    public void ChangeShirtColor(int direction)
+    {
+        if (ShirtColors == null || ShirtColors.Length == 0)
+            return;
 
+        ShirtColorIndex = (ShirtColorIndex + direction + ShirtColors.Length) % ShirtColors.Length;
+        ApplyShirtColor();
+    }
+
+    private void ApplyShirtColor()
+    {
+        foreach (Renderer rend in ShirtRenderer)
+        {
+            if (rend != null)
+            {
+                rend.material = new Material(rend.material);
+                rend.material.color = ShirtColors[ShirtColorIndex];
+            }
+        }
+    }
+    public void ChangeTieColor(int direction)
+    {
+        if (TieColors == null || TieColors.Length == 0)
+            return;
+
+        TieColorIndex = (TieColorIndex + direction + TieColors.Length) % TieColors.Length;
+        ApplyTieColor();
+    }
+
+    private void ApplyTieColor()
+    {
+        foreach (Renderer rend in TieRenderer)
+        {
+            if (rend != null)
+            {
+                rend.material = new Material(rend.material);
+                rend.material.color = TieColors[TieColorIndex];
+            }
+        }
+    }
     public void ChangeJacketColor(int direction)
     {
         if (jacketColors == null || jacketColors.Length == 0)
@@ -196,9 +246,11 @@ public class CharacterCustomizationManager : MonoBehaviour
             }
         }
     }
-    public void SetCharacterReferences(Renderer[] newSkin, Transform newHairParent, Renderer[] newJacket, Renderer[] newPants, Renderer[] newShoes)
+    public void SetCharacterReferences(Renderer[] newSkin, Transform newHairParent, Renderer[] newShirt, Renderer[] newTie, Renderer[] newJacket, Renderer[] newPants, Renderer[] newShoes)
     {
         skinRenderer = newSkin;
+        ShirtRenderer = newShirt;
+        TieRenderer = newTie;
         jacketRenderer = newJacket;
         pantsRenderer = newPants;
         shoesRenderer = newShoes;
@@ -206,9 +258,61 @@ public class CharacterCustomizationManager : MonoBehaviour
         hairParent = newHairParent;
 
         ApplySkinColor();
+        ApplyShirtColor();
+        ApplyTieColor();
         ApplyJacketColor();
         ApplyPantsColor();
         ApplyShoesColor();
         ApplyHair();
+    }
+    public void RandomizeCharacter()
+    {
+        if (skinColors.Length > 0)
+        {
+            skinColorIndex = Random.Range(0, skinColors.Length);
+            ApplySkinColor();
+        }
+
+        if (hairPrefabs.Length > 0)
+        {
+            hairIndex = Random.Range(0, hairPrefabs.Length);
+            ApplyHair(); // Esto también llama a ApplyHairColor()
+        }
+
+        if (hairColors.Length > 0)
+        {
+            hairColorIndex = Random.Range(0, hairColors.Length);
+            ApplyHairColor();
+        }
+
+        if (ShirtColors.Length > 0)
+        {
+            ShirtColorIndex = Random.Range(0, ShirtColors.Length);
+            ApplyShirtColor();
+        }
+
+        if (TieColors.Length > 0)
+        {
+            TieColorIndex = Random.Range(0, TieColors.Length);
+            ApplyTieColor();
+        }
+
+        if (jacketColors.Length > 0)
+        {
+            jacketColorIndex = Random.Range(0, jacketColors.Length);
+            ApplyJacketColor();
+        }
+
+        if (pantsColors.Length > 0)
+        {
+            pantsColorIndex = Random.Range(0, pantsColors.Length);
+            ApplyPantsColor();
+        }
+
+        if (shoesColors.Length > 0)
+        {
+            shoesColorIndex = Random.Range(0, shoesColors.Length);
+            ApplyShoesColor();
+        }
     }
 }

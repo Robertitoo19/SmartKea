@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterLoader : MonoBehaviour
 {
     [SerializeField] private Renderer[] skinRenderer;
+    [SerializeField] private Renderer[] shirtRenderer;
+    [SerializeField] private Renderer[] tieRenderer;
     [SerializeField] private Renderer[] jacketRenderer;
     [SerializeField] private Renderer[] pantsRenderer;
     [SerializeField] private Renderer[] shoesRenderer;
@@ -12,6 +14,6 @@ public class CharacterLoader : MonoBehaviour
     [SerializeField] private Transform hairParent;
     void Start()
     {
-        CharacterCustomizationManager.Instance.SetCharacterReferences(skinRenderer, hairParent, jacketRenderer, pantsRenderer, shoesRenderer);
+        CharacterCustomizationManager.Instance.SetCharacterReferences(skinRenderer, hairParent, shirtRenderer, tieRenderer, jacketRenderer, pantsRenderer, shoesRenderer);
     }
 }

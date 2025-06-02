@@ -5,6 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    [SerializeField] private GameObject genero;
+    [SerializeField] private GameObject selector;
+    public void Selector()
+    {
+        genero.SetActive(false);
+        selector.SetActive(true);
+    }
+    public void Genero()
+    {
+        genero.SetActive(true);
+        selector.SetActive(false);
+    }
     public void EscenaHombre()
     {
         SceneManager.LoadScene(3);
