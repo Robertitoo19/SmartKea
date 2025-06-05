@@ -2760,7 +2760,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1578924693}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: Genero
+        m_MethodName: PersoHombre
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
