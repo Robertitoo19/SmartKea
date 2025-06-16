@@ -14,18 +14,34 @@ public class UITheme
 }
 public class ThemeSelector : MonoBehaviour
 {
-    [SerializeField] private TMP_Dropdown themeDropdown;
+    [SerializeField] private TMP_InputField themeCodeInput;
+    [SerializeField] private UITheme[] themes;
 
-    private void Start()
+    public void OnCodeSubmitted()
     {
-        int savedIndex = PlayerPrefs.GetInt("SelectedThemeIndex", 0);
-        themeDropdown.value = savedIndex;
-        themeDropdown.onValueChanged.AddListener(OnThemeSelected);
+        string inputCode = themeCodeInput.text.Trim().ToLower(); // limpieza básica
+
+        int index = FindThemeIndexByCode(inputCode);
+        if (index != -1)
+        {
+            PlayerPrefs.SetInt("SelectedThemeIndex", index);
+            PlayerPrefs.Save();
+            Debug.Log($"Código válido. Tema guardado: {themes[index].name}");
+        }
+        else
+        {
+            Debug.LogWarning("Código de tema no válido.");
+            // Aquí podrías mostrar un mensaje en pantalla
+        }
     }
 
-    private void OnThemeSelected(int index)
+    private int FindThemeIndexByCode(string code)
     {
-        PlayerPrefs.SetInt("SelectedThemeIndex", index);
-        PlayerPrefs.Save();
+        for (int i = 0; i < themes.Length; i++)
+        {
+            if (themes[i].name.ToLower() == code)
+                return i;
+        }
+        return -1;
     }
 }
