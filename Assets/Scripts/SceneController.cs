@@ -5,32 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] private GameObject genero;
-    [SerializeField] private GameObject selector;
-    public void Selector()
+    [SerializeField] private GameObject hombre;
+    [SerializeField] private GameObject mujer;
+    public void Hombre()
     {
-        genero.SetActive(false);
-        selector.SetActive(true);
+        hombre.SetActive(true);
+        mujer.SetActive(false);
     }
-    public void Genero()
+    public void Mujer()
     {
-        genero.SetActive(true);
-        selector.SetActive(false);
+        hombre.SetActive(false);
+        mujer.SetActive(true);
     }
     public void EscenaHombre()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
     public void EscenaMujer()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
     public void PersoHombre()
     {
         SceneManager.LoadScene(1);
-    }
-    public void PersoMujer()
-    {
-        SceneManager.LoadScene(2);
     }
 }
