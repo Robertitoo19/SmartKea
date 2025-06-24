@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498c0a71d83a59f4b85e3ace801428ac, type: 3}
+  m_Name: D6
+  m_EditorClassIdentifier: 
+  questionText: "Negociaci\xF3n con atacantes / decisi\xF3n de pago"
+  options:
+  - optionText: Pagar rescate ocultamente (Despacho)
+    nextNode: {fileID: 11400000, guid: 1e92213be51993d4c9c867aa9e1a76b2, type: 2}
+    triggerID: 5
+  - optionText: "Negociar rebaja / pr\xF3rroga (Despacho)"
+    nextNode: {fileID: 11400000, guid: 1e92213be51993d4c9c867aa9e1a76b2, type: 2}
+    triggerID: 5
+  - optionText: No pagar (recuperar de backups) (Despacho)
+    nextNode: {fileID: 11400000, guid: 1e96e677381743049ac49999c234ce82, type: 2}
+    triggerID: 6
+  - optionText: "No pagar (sin backups, reconstrucci\xF3n lenta) (Despacho)"
+    nextNode: {fileID: 11400000, guid: e426b6d4ac5258c47aa3737667d25a12, type: 2}
+    triggerID: 7

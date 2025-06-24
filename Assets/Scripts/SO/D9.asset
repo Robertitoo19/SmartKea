@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498c0a71d83a59f4b85e3ace801428ac, type: 3}
+  m_Name: D9
+  m_EditorClassIdentifier: 
+  questionText: "No se pag\xF3, sin backups. \xBFComunico cierre temporal a clientes?"
+  options:
+  - optionText: "S\xED, suspender operaciones y comunicar"
+    nextNode: {fileID: 11400000, guid: bb4c8195a67d84e46b76a7a3567ee83a, type: 2}
+    triggerID: 14
+  - optionText: Intentar operar manualmente
+    nextNode: {fileID: 11400000, guid: 6083bb35ddb6bea4d874ace6d2b6578e, type: 2}
+    triggerID: 13
