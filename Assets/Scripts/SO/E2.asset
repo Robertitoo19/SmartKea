@@ -15,3 +15,4 @@ MonoBehaviour:
   questionText: "\xC9xito parcial: p\xE9rdidas altas, fuga de datos confirmada, reputaci\xF3n
     da\xF1ada pero sin quiebra."
   options: []
+  isFinalNode: 1

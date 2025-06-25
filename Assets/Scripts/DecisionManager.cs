@@ -42,4 +42,8 @@ public class DecisionManager : MonoBehaviour
 
         EventManager.Instance.RaiseOptions(optionTexts);
     }
+    public DecisionSO GetCurrentNode()
+    {
+        return currentNode;
+    }
 }

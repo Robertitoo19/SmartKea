@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject canvas;
     [SerializeField] private TMP_Text questionText;
     [SerializeField] private Button[] optionButtons;
+    [SerializeField] private GameObject continueButton;
 
     private void OnEnable()
     {
@@ -30,12 +32,25 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         FindObjectOfType<ThridPerson>().SetCanMove(false);
 
+        continueButton.SetActive(false); // Ocultar por si acaso
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
     void UpdateOptions(string[] options)
     {
+        DecisionSO currentNode = FindObjectOfType<DecisionManager>().GetCurrentNode();
+
+        if (currentNode != null && currentNode.isFinalNode)
+        {
+            continueButton.SetActive(true);
+            continueButton.GetComponent<Button>().onClick.RemoveAllListeners();
+            continueButton.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                Time.timeScale = 1f;
+                SceneManager.LoadScene("0"); // <-- Cambia esto por el nombre real
+            });
+        }
         for (int i = 0; i < optionButtons.Length; i++)
         {
             if (i < options.Length)

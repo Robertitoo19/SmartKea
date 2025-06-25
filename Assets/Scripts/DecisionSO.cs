@@ -8,6 +8,8 @@ public class DecisionSO : ScriptableObject
 {
     [TextArea] public string questionText;
     public DecisionOption[] options;
+
+    public bool isFinalNode = false;
 }
 
 [System.Serializable]

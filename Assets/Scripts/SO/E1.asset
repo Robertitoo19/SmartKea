@@ -15,3 +15,4 @@ MonoBehaviour:
   questionText: "Control de da\xF1os: empresa sobrevive con multa moderada y reputaci\xF3n
     parcialmente recuperada."
   options: []
+  isFinalNode: 1

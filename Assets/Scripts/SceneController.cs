@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject mujer;
     [SerializeField] private GameObject botonHombre;
     [SerializeField] private GameObject botonMujer;
+    [SerializeField] private GameObject Ocuiltar;
     public void Hombre()
     {
         botonHombre.SetActive(true);
@@ -23,6 +24,10 @@ public class SceneController : MonoBehaviour
         hombre.SetActive(false);
         mujer.SetActive(true);
     }
+    public void Ocultar()
+    {
+        Ocuiltar.SetActive(false);
+    }
     public void EscenaHombre()
     {
         SceneManager.LoadScene(2);
@@ -34,5 +39,9 @@ public class SceneController : MonoBehaviour
     public void PersoHombre()
     {
         SceneManager.LoadScene(1);
+    }
+    public void Inicio()
+    {
+        SceneManager.LoadScene(0);
     }
 }

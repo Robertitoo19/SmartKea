@@ -15,9 +15,10 @@ MonoBehaviour:
   questionText: "Direcci\xF3n se entera tarde y enfadada. \xBFRevela el CISO el alcance
     real ahora?\n"
   options:
-  - optionText: "S\xED, detallar todo (incl. backups perdidos)"
+  - optionText: "S\xED, detallar todo (incl. backups perdidos) (Sala reuniones)"
     nextNode: {fileID: 11400000, guid: f2f15e3ad9501274fb565043b0dcb69b, type: 2}
     triggerID: 4
-  - optionText: Minimizar el impacto
+  - optionText: Minimizar el impacto (Sala reuniones)
     nextNode: {fileID: 11400000, guid: f2f15e3ad9501274fb565043b0dcb69b, type: 2}
     triggerID: 4
+  isFinalNode: 0
